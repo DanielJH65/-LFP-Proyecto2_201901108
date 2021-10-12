@@ -1,0 +1,51 @@
+INICIO -> INSTRUCCIONES
+
+INSTRUCCIONES -> INTRUCCION INSTRUCCIONES
+
+INSTRUCCION -> CLAVES
+	| REGISTROS
+	| IMPRIMIR
+	| IMPRIMIRLN
+	| CONTEO
+	| PROMEDIO
+	| CONTARSI
+	| DATOS
+	| SUMAR
+	| MAX
+	| MIN
+	| REPORTE
+	
+CLAVES -> claves igual cora LISTA_CLAVES corc
+LISTA_CLAVES -> cadena CLAVES2
+CLAVES2 -> coma cadena CLAVES2
+	 | epsilon
+	 
+REGISTROS -> registros igual cora LISTA_RE corc
+LISTA_RE -> REGISTRO LISTA_RE
+	  | epsilon
+REGISTRO -> llavea LISTA_VAL llavec
+LISTA_VAL -> valor VALORES
+VALORES -> coma valor VALORES
+	 | epsilon
+	 
+IMPRIMIR -> imprimir para cadena parc puntocoma
+
+IMPRIMIRLN -> imprimir para cadena parc puntocoma
+
+CONTEO -> conteo para parc puntocoma
+
+PROMEDIO -> promedio para cadena parc puntocoma
+
+CONTARSI -> contar para cadena coma VALOR parc puntocoma
+VALOR -> entero
+	| decimal
+	
+DATOS -> datos para parc puntocoma
+
+SUMAR -> sumar para cadena parc puntocoma
+
+MAX -> max para cadena parc puntocoma
+
+MIN -> min para cadena parc puntocoma
+
+REPORTE -> reporte para cadena parc puntocoma
